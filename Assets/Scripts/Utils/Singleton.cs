@@ -1,8 +1,9 @@
+using Unity.Netcode;
 using UnityEngine;
 
 // Credits: Samson
 
-public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public abstract class Singleton<T> : NetworkBehaviour where T : NetworkBehaviour
 {
     public static T instance { get; private set; }
 
