@@ -58,7 +58,11 @@
             "m_Id": "81c4c006f1bc4837be4dd8757e28bb43"
         }
     ],
-    "m_GroupDatas": [],
+    "m_GroupDatas": [
+        {
+            "m_Id": "23f31c0ef2414cd6b841b811ffa2d787"
+        }
+    ],
     "m_StickyNoteDatas": [],
     "m_Edges": [
         {
@@ -318,7 +322,7 @@
     "m_ShaderOutputName": "Edge",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.28999999165534975,
+        "x": 0.3199999928474426,
         "y": 1.0,
         "z": 1.0,
         "w": 1.0
@@ -629,6 +633,17 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.GroupData",
+    "m_ObjectId": "23f31c0ef2414cd6b841b811ffa2d787",
+    "m_Title": "Lets user insert texture in Inspector",
+    "m_Position": {
+        "x": -451.1999816894531,
+        "y": -127.20001220703125
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.TangentMaterialSlot",
     "m_ObjectId": "2a4167b76d484d60bc40e9e207acc391",
     "m_Id": 0,
@@ -680,7 +695,7 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "353161b1d1de4053a98cdcc284d69d6e",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "23f31c0ef2414cd6b841b811ffa2d787"
     },
     "m_Name": "Property",
     "m_DrawState": {
@@ -1002,17 +1017,17 @@
     "m_Type": "UnityEditor.ShaderGraph.SampleTexture2DNode",
     "m_ObjectId": "87b7d48b7bca4a8fbff3763713a978c6",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "23f31c0ef2414cd6b841b811ffa2d787"
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -207.9999542236328,
-            "y": -67.19996643066406,
-            "width": 207.99998474121095,
-            "height": 430.4000244140625
+            "x": -208.00006103515626,
+            "y": -67.20000457763672,
+            "width": 208.0,
+            "height": 430.3999328613281
         }
     },
     "m_Slots": [
