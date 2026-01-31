@@ -581,14 +581,30 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
       objectReference: {fileID: 2100000, guid: 79db5c17df2cca84c87a20376791d0ad, type: 2}
+    - target: {fileID: -674878561654183148, guid: 9cedad70a23918b45977f41b658d1d39, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9cedad70a23918b45977f41b658d1d39, type: 3}
       propertyPath: m_Name
       value: Alleyway
       objectReference: {fileID: 0}
     - target: {fileID: 2334830646326187502, guid: 9cedad70a23918b45977f41b658d1d39, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334830646326187502, guid: 9cedad70a23918b45977f41b658d1d39, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -876546973899608171, guid: bedff75af16f4c848b05b22e6d8c83f0, type: 3}
+      objectReference: {fileID: 2100000, guid: ee06313ccee00ee4794c94d4b3ee4a0e, type: 2}
+    - target: {fileID: 2334830646326187502, guid: 9cedad70a23918b45977f41b658d1d39, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334830646326187502, guid: 9cedad70a23918b45977f41b658d1d39, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ef087a317c48034a871f7081a4d1226, type: 2}
     - target: {fileID: 4811171726696857748, guid: 9cedad70a23918b45977f41b658d1d39, type: 3}
       propertyPath: m_Name
       value: testSubject
@@ -666,7 +682,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
