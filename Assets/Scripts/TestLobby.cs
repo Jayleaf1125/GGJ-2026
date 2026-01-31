@@ -5,17 +5,18 @@ using Unity.Services.Authentication;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using System.Collections.Generic;
+using TMPro;
 
 public class TestLobby : MonoBehaviour
 {
     Lobby _hostLobby;
     float _heartbeatTimer;
-    string playerName;
+    string _playerName;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     async void Start()
     {
-        playerName = "Player" + Random.Range(10, 99);
+        _playerName = "Player" + Random.Range(10, 99);
 
         await UnityServices.InitializeAsync();
 
@@ -65,8 +66,10 @@ public class TestLobby : MonoBehaviour
 
             Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName: lobbyName, maxPlayers: maxPlayers, options: createLobbyOptions);
 
-            _hostLobby = lobby;
             Debug.Log($"Created Lobby! | Name: {lobby.Name} | Max Players: {lobby.MaxPlayers}");
+            
+            _hostLobby = lobby;
+            PrintPlayers(lobby);
 
         } catch (LobbyServiceException e)
         {
@@ -122,6 +125,7 @@ public class TestLobby : MonoBehaviour
             QueryResponse queryResponse = await LobbyService.Instance.QueryLobbiesAsync();
             Lobby joinedLobby = await LobbyService.Instance.JoinLobbyByIdAsync(queryResponse.Results[0].Id);
             Debug.Log("Joined Lobby! Test Works");
+            PrintPlayers(joinedLobby);
         }
         catch (LobbyServiceException e)
         {
@@ -144,25 +148,39 @@ public class TestLobby : MonoBehaviour
 
     void PrintPlayers(Lobby lobby)
     {
-        Debug.Log($"Players in Lobby: {lobby.Name}");
+        Debug.Log($"Players in Lobby: {lobby.Players}");
+
+        string allCurrentPlayers = string.Empty;
 
         foreach (Player player in lobby.Players)
         {
-            Debug.Log($"{player.Id} | {player.Data["PlayerName"].Value}");
+            allCurrentPlayers += $"{player.Data["PlayerName"].Value} | ";
         }
+
+        Debug.Log(allCurrentPlayers);
     }
 
     public void PrintSingleLobby()
     {
-        //Debug.Log($"Players in Lobby: {_hostLobby.Name}");
-
-        foreach (Player player in _hostLobby.Players)
+        if (_hostLobby == null)
         {
-            Debug.Log($"{player.Id} | {player.Data["PlayerName"].Value}");
+            Debug.LogWarning("Not the host");
+            return;
         }
+
+        //foreach (Player player in _hostLobby.Players)
+        //{
+        //    //Debug.Log($"{player.Data["PlayerName"].Value}");
+        //    //Debug.Log("Hello");
+        //}
+        Debug.Log(_hostLobby.Players.Count);
     }
 
-
+    public void PrintCurrentPlayerInfo()
+    {
+        Player player = GetPlayer();
+        Debug.Log($"{player.Data["PlayerName"].Value}");
+    }
 
     Player GetPlayer()
     {
@@ -170,7 +188,7 @@ public class TestLobby : MonoBehaviour
         {
             Data = new Dictionary<string, PlayerDataObject> 
             {
-                { "PlayerName", new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, playerName) }
+                { "PlayerName", new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, _playerName) }
             }
         };
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    private void Awake()
+    private protected override void Awake()
     {
         base.Awake();
     }
