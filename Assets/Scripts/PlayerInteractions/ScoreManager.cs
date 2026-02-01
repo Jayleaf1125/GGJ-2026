@@ -14,6 +14,10 @@ public class ScoreManager : MonoBehaviour
     {
          FakeMoney += amount;
     }
+    public void LoseFakeMoney(float amount) 
+    {
+    FakeMoney -= amount;
+    }
     public void LoseMoney(float amount)
     {
         Money -= amount;
