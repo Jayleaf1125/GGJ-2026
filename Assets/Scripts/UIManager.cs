@@ -3,7 +3,7 @@ using UnityEngine;
 public class UIManager : Singleton<UIManager>
 {
 
-    private void Awake()
+    private protected override void Awake()
     {
         base.Awake();
     }

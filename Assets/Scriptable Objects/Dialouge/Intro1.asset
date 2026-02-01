@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bfebd2496b4e047b511fe1777e0321, type: 3}
   m_Name: Intro1
   m_EditorClassIdentifier: 
-  dialougeName: Matthew
+  dialougeName: Host
   dialougeText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-  dialougeImage: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  dialougeImage: {fileID: 21300000, guid: 97e6a39ebb61ef2469f77cb66c58a74c, type: 3}
   nextDialougeText: {fileID: 11400000, guid: 3ce2202ea8b377d47a55d29a531d5c96, type: 2}
