@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8efac20fb566add468021a5cefcba64d
+guid: 46034db0885b68144a24f79152db1a36
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Frame
-    second: {fileID: 2100000, guid: 1fd5e068d06a4114ab91a566022e647d, type: 2}
+      name: Column_ENDS
+    second: {fileID: 2100000, guid: 7bcd698a8242e6e428f5651b598b2aea, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Picture
-    second: {fileID: 2100000, guid: 2f1480cbef1b0734fb0adfbd11d18c82, type: 2}
+      name: Column_MID
+    second: {fileID: 2100000, guid: 2c03ad993edd6ac4089d43f53556eaae, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
