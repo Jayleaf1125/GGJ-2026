@@ -1,12 +1,16 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class IntroSceneManager : MonoBehaviour
 {
+    [Header("Dialouge Objects")]
     [SerializeField] DialougeSO currrentDialouge;
     [SerializeField] TextMeshProUGUI dialougeText;
+    [SerializeField] TextMeshProUGUI dialougeName;
     [SerializeField] TextMeshProUGUI btnText;
+    [SerializeField] Image dialougeImage;
 
     [Header("Canvas Objects")]
     [SerializeField] GameObject dialougeCanvas;
@@ -16,6 +20,8 @@ public class IntroSceneManager : MonoBehaviour
     void Start()
     {
         dialougeText.text = currrentDialouge.dialougeText;
+        dialougeName.text = currrentDialouge.dialougeName;
+        dialougeImage.sprite = currrentDialouge.dialougeImage;
 
         dialougeCanvas.SetActive(true);
         howToPlayCanvas.SetActive(false);
@@ -36,6 +42,8 @@ public class IntroSceneManager : MonoBehaviour
         {
             currrentDialouge = currrentDialouge.nextDialougeText;
             dialougeText.text = currrentDialouge.dialougeText;
+            dialougeName.text = currrentDialouge.dialougeName;
+            dialougeImage.sprite = currrentDialouge.dialougeImage;
         }
         else
         {
