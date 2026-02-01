@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    private void Awake()
+    AudioSource _mainMenuSound;
+
+    [Range(0, 1)]
+    public float volumeAmount;
+
+    private protected override void Awake()
     {
         base.Awake();
     }
@@ -10,12 +15,12 @@ public class SoundManager : Singleton<SoundManager>
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        AudioSource[] allAudioSources = GetComponents<AudioSource>();
+        _mainMenuSound = allAudioSources[0];
+
+        foreach (AudioSource audioSource in allAudioSources) audioSource.volume = volumeAmount;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void PlayMainMenuSound() => _mainMenuSound.Play();
+    public void StopMainMenuSound() => _mainMenuSound.Stop();
 }
