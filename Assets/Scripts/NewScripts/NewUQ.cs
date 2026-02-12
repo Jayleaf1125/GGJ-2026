@@ -10,6 +10,6 @@ public class NewUQ : MonoBehaviour
 
    public void VinterEffect()
     {
-        Debug.Log("The target is" + transform.position);
+       
     }
 }

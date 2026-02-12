@@ -5,12 +5,15 @@ public class NewBoss : MonoBehaviour
 {
     public NewScore Score;
 
+  //  public RoundChange Round;
+
     //this list keeps tranks of "BUsiness Partners" that the boss makes, using this to activate his ability at the start of the new round
     public List<NewUQ> BP;
     
     void Start()
     {
         Score = GetComponent<NewScore>();
+      //  Round = GetComponent<RoundChange>();
     }
 
    public void Deal(GameObject Partner)
@@ -33,6 +36,7 @@ public class NewBoss : MonoBehaviour
         foreach (NewUQ Be in BP)
         {
             Score.AddMoney(0.5f);
+         //   Round.ConfirmEffect();
         }
     }
 }

@@ -10,9 +10,12 @@ public class NewRail : MonoBehaviour
 
    //This float only increases when making a deal with the con man
    public float RailFake = 0;
+
+   //public RoundChange Round;
     void Start()
     {
         Score = GetComponent<NewScore>();
+        //Round = GetComponent<RoundChange>();
     }
 
    public void Deal(GameObject Partner)
@@ -33,5 +36,6 @@ public class NewRail : MonoBehaviour
     {
         Score.AddMoney(RailToken);
         Score.AddFake(RailFake);
+        //Round.ConfirmEffect();
     }
 }

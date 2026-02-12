@@ -8,9 +8,12 @@ public class NewVinter : MonoBehaviour
     //this List will keep track of the people the vinter made deals with. This will allow for the vinter to execute the Vinter effect next round
     public List<NewUQ> Victims;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+   // public RoundChange Round;
     void Start()
     {
        Score = GetComponent<NewScore>(); 
+      // Round = GetComponent<RoundChange>();
     }
 
     public void Deal (GameObject Partner)
@@ -46,5 +49,6 @@ public class NewVinter : MonoBehaviour
            Score.AddMoney(1);
         }
         Victims.Clear();
+       // Round.ConfirmEffect();
     }
 }

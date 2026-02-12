@@ -7,8 +7,17 @@ public class NewScore : MonoBehaviour
    //this variable keeps track of the amount of Fake money that occurs from the effect of the con man
    public float ConScore = 0;
 
-//general function that increases the attached gameobject's score by the amount provided in the function.
-   public void AddMoney (float Amount)
+//this variable is responsible for associating the script with the character (for example, the banker would have the variable set to the banker game object)
+   public GameObject Character;
+
+   void Start()
+    {
+        //this finds the gameobject this script is attached to and changes the variable to that gameobject
+        Character = gameObject;
+    }
+
+    //general function that increases the attached gameobject's score by the amount provided in the function.
+    public void AddMoney (float Amount)
     {
         Score += Amount;
     }
@@ -17,6 +26,15 @@ public class NewScore : MonoBehaviour
     public void TakeMoney (float Amount)
     {
         Score -= Amount;
+        //this checks if the gameobject this script is attached to is the banker, that way the banker's effect can activate.
+        if(Character == GameObject.Find("Banker"))
+        {
+            NewBank B = Character.GetComponent<NewBank>();
+            if(B != null)
+            {
+                B.BankEffect();
+            }
+        }
     }
 
 //this function increases the ConScore which is unique to the conman Character.
