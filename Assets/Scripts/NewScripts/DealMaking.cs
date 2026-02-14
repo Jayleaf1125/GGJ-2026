@@ -153,21 +153,21 @@ public class DealMaking : MonoBehaviour
                 }
             case 3:
                 {
-                    /*NewBanker BankerD = Receiving.GetComponent<NewBanker>();
+                    NewBank BankerD = Receiving.GetComponent<NewBank>();
                     if(BankerD != null)
                     {
                         BankerD.Deal(Giving);
-                    */
-                    break;
                     
+                    }
+                    break;
                 }
                 case 4:
                 {
-                    /*NewConMan ConManD = Receiving.GetComponent<NewConMan>();
+                    NewConMan ConManD = Receiving.GetComponent<NewConMan>();
                     if(ConManD != null)
                     {
                         ConManD.Deal(Giving);
-                    }*/
+                    }
                     break;
                 }
                 case 5:

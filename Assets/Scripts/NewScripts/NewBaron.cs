@@ -1,8 +1,13 @@
+using System.Collections.Generic;
+using Unity.Mathematics;
+using Unity.Mathematics.Geometry;
 using UnityEngine;
 
 public class NewBaron : MonoBehaviour
 {
    public NewScore Score;
+
+   public List<GameObject> Invests;
 
  //  public RoundChange Round;
    
@@ -28,9 +33,27 @@ public class NewBaron : MonoBehaviour
             Score.AddMoney(3);
         }
     }
+
+    public void EndRound()
+    {
+        foreach(GameObject Victims in Invests)
+        {
+            NewUQ N = GetComponent<NewUQ>();
+            if(N != null)
+            {
+                N.BaronEffect();
+            }
+        }
+    }
     public void NewRound()
     {
-      //  Round.ConfirmEffect();
+        Invests.Clear();
+    }
+
+    public void Effect(float Amount)
+    {
+        Score.AddMoney(math.abs(Amount) + 1);
+        
     }
 }
 

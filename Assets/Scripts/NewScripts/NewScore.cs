@@ -7,6 +7,8 @@ public class NewScore : MonoBehaviour
    //this variable keeps track of the amount of Fake money that occurs from the effect of the con man
    public float ConScore = 0;
 
+   public float ScoreThisRound = 0;
+
 //this variable is responsible for associating the script with the character (for example, the banker would have the variable set to the banker game object)
    public GameObject Character;
 
@@ -20,12 +22,14 @@ public class NewScore : MonoBehaviour
     public void AddMoney (float Amount)
     {
         Score += Amount;
+        ScoreThisRound += Amount;
     }
 
 //this function takes away money instead of taking it.
     public void TakeMoney (float Amount)
     {
         Score -= Amount;
+        ScoreThisRound -= Amount;
         //this checks if the gameobject this script is attached to is the banker, that way the banker's effect can activate.
         if(Character == GameObject.Find("Banker"))
         {

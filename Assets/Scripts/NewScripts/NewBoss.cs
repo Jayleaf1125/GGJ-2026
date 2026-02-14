@@ -9,6 +9,8 @@ public class NewBoss : MonoBehaviour
 
     //this list keeps tranks of "BUsiness Partners" that the boss makes, using this to activate his ability at the start of the new round
     public List<NewUQ> BP;
+
+    public List<NewUQ> AP;
     
     void Start()
     {
@@ -33,10 +35,25 @@ public class NewBoss : MonoBehaviour
 
     public void NewRound()
     {
-        foreach (NewUQ Be in BP)
+        foreach(NewUQ Cooked in BP)
         {
-            Score.AddMoney(0.5f);
-         //   Round.ConfirmEffect();
+            AP.Add(Cooked);
         }
+        BP.Clear();
+    }
+
+    public void EndRound()
+    {
+       foreach(NewUQ Twin in AP)
+        {
+            Debug.Log("pluh");
+            Twin.BossEffect();
+        }
+        AP.Clear();
+    }
+    public void Effect(float Amount)
+    {
+        
+        Score.AddMoney(Amount/2);
     }
 }
