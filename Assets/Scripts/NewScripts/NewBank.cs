@@ -48,4 +48,10 @@ public class NewBank : MonoBehaviour
         Loss = false;
         BankVictims.Clear();
     }
+
+    public void ScoreReset()
+    {
+
+        Score.ScoreThisRound = 0;
+    }
 }

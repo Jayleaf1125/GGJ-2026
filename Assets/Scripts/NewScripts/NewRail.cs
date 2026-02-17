@@ -38,4 +38,10 @@ public class NewRail : MonoBehaviour
         Score.AddFake(RailFake);
         //Round.ConfirmEffect();
     }
+
+    public void ScoreReset()
+    {
+
+        Score.ScoreThisRound = 0;
+    }
 }

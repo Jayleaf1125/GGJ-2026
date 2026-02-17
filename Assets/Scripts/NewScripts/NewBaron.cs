@@ -55,6 +55,12 @@ public class NewBaron : MonoBehaviour
         Score.AddMoney(math.abs(Amount) + 1);
         
     }
+
+    public void ScoreReset()
+    {
+
+        Score.ScoreThisRound = 0;
+    }
 }
 
 //since the baron's ability is just to add 1 to its default add score, I just took care of it here. Nothing too crazy.

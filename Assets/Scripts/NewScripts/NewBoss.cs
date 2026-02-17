@@ -56,4 +56,10 @@ public class NewBoss : MonoBehaviour
         
         Score.AddMoney(Amount/2);
     }
+
+    public void ScoreReset()
+    {
+
+        Score.ScoreThisRound = 0;
+    }
 }

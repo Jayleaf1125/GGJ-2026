@@ -26,5 +26,11 @@ public class NewInvent : MonoBehaviour
         }
     }
 
+    public void ScoreReset()
+    {
+
+        Score.ScoreThisRound = 0;
+    }
+
     
 }

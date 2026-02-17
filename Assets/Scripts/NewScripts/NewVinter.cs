@@ -51,4 +51,10 @@ public class NewVinter : MonoBehaviour
         Victims.Clear();
        // Round.ConfirmEffect();
     }
+
+    public void ScoreReset()
+    {
+
+        Score.ScoreThisRound = 0;
+    }
 }

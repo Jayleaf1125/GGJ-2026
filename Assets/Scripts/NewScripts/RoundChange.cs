@@ -73,7 +73,7 @@ public class RoundChange : MonoBehaviour
                 //Boss.ScoreReset();
                 //Bank.ScoreReset();
                 //Con.ScoreReset();
-                //Invent.ScoreReset();
+                Invent.ScoreReset();
                 //Mine.ScoreReset();
    }
    public void ConfirmEffect()

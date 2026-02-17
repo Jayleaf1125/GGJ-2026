@@ -41,5 +41,11 @@ public class NewMine : MonoBehaviour
             Score.AddMoney(2);
         }
     }
+
+    public void ScoreReset()
+    {
+
+        Score.ScoreThisRound = 0;
+    }
     
 }

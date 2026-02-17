@@ -16,4 +16,9 @@ public class NewConMan : MonoBehaviour
         Score.AddMoney(1);
     }
     
+    public void ScoreReset()
+    {
+
+        Score.ScoreThisRound = 0;
+    }
 }
